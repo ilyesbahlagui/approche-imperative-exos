@@ -17,24 +17,41 @@ import outils.Resultat;
  *
  */
 @RunWith(ExerciceRunner.class)
-@Exercice(nom="InteractifTantQue")
+@Exercice(nom = "InteractifTantQue")
 public class Ex16_InteractifTantQue {
-	
+
 	/**
-	 * Ne pas modifier les informations portées par l'annotation. 
+	 * Ne pas modifier les informations portées par l'annotation.
 	 */
 	@Test
 	@Question(numero = 1)
 	public void interactif() {
+
 		
-		Scanner scanner = new Scanner(System.in) ;
-		
+		Scanner scanner = new Scanner(System.in);
 		// TODO Tant que le nombre saisi par l'utilisateur n'est pas compris
-		// entre 1 et 10 inclus l'application continue à demander un nombre à l'utilisateur.
-		// Si ce nombre est compris entre 1 et 10, l'application LOGUE le résultat 
+		// entre 1 et 10 inclus l'application continue à demander un nombre à
+		// l'utilisateur.
+		// Si ce nombre est compris entre 1 et 10, l'application LOGUE le résultat
 		// et s'arrête.
+		// Affichage d'un message
+	
+		System.out.println("Veuillez saisir un nombre : ");
 		
-		scanner.close();
+		// Attente d'une saisie par l'utilisateur
+		 
+	
+			int nb = scanner.nextInt();
+			
+			while(1>nb || nb>10) {
+				 nb = scanner.nextInt();
+			}
+			Resultat.log(nb);
+		
+		
+		
+		 scanner.close();
+		
 	}
 
 }

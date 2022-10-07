@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -33,6 +34,21 @@ public class Ex13_Rotation {
 		// après rotation
 		
 		// TODO Afficher le contenu du tableau après rotation avec Resultat.log
+
+int [] tab2=new int [array.length];
+for(int i=0;i<tab2.length;i++) {
+	if(i==0) {
+		tab2[i]=array[array.length-1];
+	}
+	else {
+		tab2[i]=array[i-1];
+	}
+	System.out.println(tab2[0]+" "+tab2[1]+" "+tab2[2]+" "+tab2[3]);
+	Resultat.log(tab2[i]);
+	
+}
+
+
 	}
 
 }
